@@ -1,0 +1,11 @@
+--- Makefile	2015-05-28 08:58:35.968769478 +0200
++++ new_makefile	2015-05-28 08:59:51.424773519 +0200
+@@ -15,7 +15,7 @@
+ 	mkdir -p $(prefix)/lib/pkgconfig
+ 	sed -e s:PKG_PREFIX:$(prefix):g <lib/pkgconfig/libspotify.pc >$(prefix)/lib/pkgconfig/libspotify.pc
+ 
+-	ldconfig
++	ldconfig -N
+ 
+ uninstall:
+ 	rm -rf $(prefix)/include/libspotify
